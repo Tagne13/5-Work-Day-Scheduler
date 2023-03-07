@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
   // Today's date
-  const thisDate = dayjs();
+  const todayDate = dayjs();
 
-  $('#currentDay').text(thisDate.format('dddd, MMMM D YYYY'));
+  $('#currentDay').text(todayDate.format('dddd, MMMM D YYYY'));
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
