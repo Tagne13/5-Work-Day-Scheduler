@@ -18,10 +18,50 @@ $(document).ready(function() {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
-  //
 
+  // Create schedule function
+  function createSchedule(date) {
+
+    // Set start time to 9am
+    date = moment(date).hour(9);
+
+    for (i = 0; i < 9; i++) {
+      // Create div with row class for Bootstrap
+      const rowDiv = $('<div>').addClass('row').attr('id', `row${i}`);
+
+      // Create div for time block
+      const hourDiv = $('<div>').addClass('col-2 col-md-1 hour text-center py-3').text(date.format('H a')).attr('id', `hour${i}`);
+
+      // Create area for text input
+      const descriptionDiv = $('<textarea>').addClass('col-8 col-md-10 description').attr('id', `description${i}`);
+
+      // Create div for button
+      const saveDiv = $('<div>').addClass('btn saveBtn col-2 col-md-1');
+      const saveBtn = $('<button>').addClass('btn fas fa-save').attr('id', i).attr('title', 'Save');
+
+      // Append to calendar
+      $('.container').append(rowDiv.append(hourDiv, descriptionDiv, saveDiv.append(saveBtn)));
+
+      // Color code descriptionDiv by time
+      if (todayDate.isAfter(date, 'hour')) {
+        descriptionDiv.addClass('past');
+      } else if (todayDate.isBefore(date, 'hour')) {
+        descriptionDiv.addClass('future');
+      } else {
+        descriptionDiv.addClass('present');
+      }
+
+      // Increment time by 1 hour for each row
+      date.add(1, 'hour');
+    }
+
+  }  
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  //
+
+  // Save input function
+
+  //Event Listener
+
 });
