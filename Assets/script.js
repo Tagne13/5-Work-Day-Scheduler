@@ -13,17 +13,11 @@ $(document).ready(function() {
   // useful when saving the description in local storage?
   //
 
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-
   // Create schedule function
   function createSchedule(date) {
 
     // Set start time to 9am
-    date = moment(date).hour(9);
+    date = dayjs(date).hour(9);
 
     for (i = 0; i < 9; i++) {
       // Create div with row class for Bootstrap
@@ -56,6 +50,23 @@ $(document).ready(function() {
     }
 
   }  
+
+  $(window).on('load', createSchedule());
+
+  let saveButton = $('.saveBtn');
+  let hourBox = $('.description');
+
+  function displayTodo() {
+    for (let i = 0; i < 9; i++) {
+      let savedCal = localStorage.getItem('text' + i);
+      $('#description' + i).text(savedCal);
+    }
+  }
+
+  function addDescrip (event) {
+    event.preventDefault();
+    localStorage.setItem($(this)[0].previousElementSibling.id, $(this)[0].previousElementSibling.value);
+  }
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
@@ -63,5 +74,6 @@ $(document).ready(function() {
   // Save input function
 
   //Event Listener
-
+  saveButton.click(addDescrip);
+  displayTodo();
 });
