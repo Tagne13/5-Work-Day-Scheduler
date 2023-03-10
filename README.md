@@ -2,12 +2,7 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+This assignment application implements newly instructed upon code from 3rd party APIs jQuery and Day.js in addition to previously learned HTML, CSS, and JavaScript. The user will be able to add to-do tasks into a standard work day schedule and save them for planning purposes. This application helped teach me how to implement jQuery and Day.js as supplements to JavaScript. 
 
 ## Installation
 
@@ -15,11 +10,10 @@ N/A
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Website: https://tagne13.github.io/5-Work-Day-Scheduler/
+Repository: https://github.com/Tagne13/Code-Quiz-4.git
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
-![alt text](assets/images/screenshot.png)
+![Screenshot](Assets/Images/screenshot.png)
 
 ## Credits
 

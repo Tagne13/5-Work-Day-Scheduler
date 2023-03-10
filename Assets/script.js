@@ -7,9 +7,9 @@ $(document).ready(function () {
 
   // Create schedule function
   function createSchedule(date) {
-
+  
     // Set start time to 9am
-    date = dayjs(date).hour(9);
+    date = dayjs().hour(9);
 
     for (i = 0; i < 9; i++) {
       // Create div with row class for Bootstrap
