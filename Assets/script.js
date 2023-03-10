@@ -16,13 +16,13 @@ $(document).ready(function () {
       const rowDiv = $('<div>').addClass('row').attr('id', `row${i}`);
 
       // Create div for time block
-      const hourDiv = $('<div>').addClass('col-2 col-md-1 time-block hour text-center py-3').text(date.format('H a')).attr('id', `hour${i}`);
+      const hourDiv = $('<div>').addClass('col-2 col-md-1 time-block hour d-flex justify-content-center text-center py-3').text(date.format('H a')).attr('id', `hour${i}`);
 
       // Create area for text input
       const descriptionDiv = $('<textarea>').addClass('col-8 col-md-10 time-block description').attr('id', `description${i}`);
 
       // Create div for button
-      const saveDiv = $('<div>').addClass('btn saveBtn col-2 col-md-1 save-block');
+      const saveDiv = $('<div>').addClass('btn saveBtn col-2 col-md-1 d-flex justify-content-center save-block');
       const saveBtn = $('<button>').addClass('btn fas fa-save').attr('id', i).attr('title', 'Save');
 
       // Append to calendar
