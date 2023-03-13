@@ -3,14 +3,16 @@ $(document).ready(function () {
   // Display today's date
   const todayDate = dayjs();
 
-
   $('#currentDay').text(todayDate.format('dddd, MMMM D YYYY'));
 
   // Create schedule function
   function createSchedule(date) {
 
     for (i = 0; i < 9; i++) {
+
+      // Start day at 9am
       date = dayjs().hour(i + 9);
+
       // Create div with row class for Bootstrap
       const rowDiv = $('<div>').addClass('row').attr('id', `row${i}`);
 

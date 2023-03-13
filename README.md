@@ -12,17 +12,19 @@ N/A
 
 Website: https://tagne13.github.io/5-Work-Day-Scheduler/
 
-Repository: https://github.com/Tagne13/Code-Quiz-4.git
+Repository: https://github.com/Tagne13/5-Work-Day-Scheduler 
 
 ![Screenshot](Assets/Images/Screenshot.png)
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+Special thank you to tutor Andres Long through the Bootcamp tutor team for assistance with JavaScript debugging in the create schedule function. 
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+https://jquery.com/
 
-If you followed tutorials, include links to those here as well.
+https://day.js.org/en/
+
+https://getbootstrap.com/
 
 ## License
 
