@@ -14,7 +14,7 @@ Website: https://tagne13.github.io/5-Work-Day-Scheduler/
 
 Repository: https://github.com/Tagne13/Code-Quiz-4.git
 
-![Screenshot](Assets/Images/screenshot.png)
+![Screenshot](Assets/Images/Screenshot.png)
 
 ## Credits
 
